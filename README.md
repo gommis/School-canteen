@@ -1,11 +1,13 @@
-# School-canteen
-School assessment for DTS, due in week 6
+# comic-book-store
+Comic book store practice assessment for DTS
 
-Possible versions:
-Ver:1.0
+Ver 1.1: Got some python and html from materialize. still making the navbar and deciding what colours to use for web design.
 
-Ver:1.1
+ver1.1 update: finished the navbar and starting to work on the cards with the stock level and comics page.
 
-Ver:1.2
+ver1.1 update: finished the cards, now working on the stock levels of the comics going down each time the user buys one.
 
-ver:1.3
+ver1.1 update: made the stock levels decrease by one when user one comic is bought.
+
+ver1.1 update: able to restock the comics by one, this will increase the number of comics by one.
+

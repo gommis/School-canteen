@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	% include('shared/navbar.html')
+	% include('shared/head.html')
+
+
+	<div class="row">
+		%for comic in book_info:
+		<div class="col s12 m4">
+			<div class="card blue-grey darken-1">
+				<div class="card-content white-text">
+					<span class="card-title">{{comic.comic_name}}</span>
+					<p>Number left: {{comic.comic_num}}</p>
+				</div>
+				<div class="card-action">
+					<a href="/buy_comic/{{comic.id}}">Buy Food</a>
+					<a href="/re_stock/{{comic.id}}">Re-Stock Food</a>
+				</div>
+			</div>
+		</div>
+		%end
+	</div>
+	
+ 
