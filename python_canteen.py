@@ -52,7 +52,7 @@ def re_stock(food_id):
     food_id = int(food_id)
     found_food = None
     for food in food:
-        if comic.id == comic_id:
+        if food.id == food_id:
             found_food = food
     data = dict (food = found_food)
     found_food.food_num = found_food.food_num + 1
