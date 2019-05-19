@@ -29,29 +29,27 @@ def card():
     data = dict (food_info = foods)
     return data
 
-@route('/buy_food/<food_id>')
-@view ('buy_food')
+@route('/purchase_food/<food_id>')
+@view ('purchase_food')
 def buy_food(food_id):
 
     food_id = int(food_id)
     found_food = None
     for food in foods:
         if food.id == food_id:
-            found_book = comic
+            found_food = food
     data = dict (food = found_food)
     found_food.food_num = found_food.food_num - 1
     return data
 
 
-
-
-@route('/re_stock/<food_id>')
-@view ('re_stock')
+@route('/re_stock_food/<food_id>')
+@view ('re_stock_food')
 def re_stock(food_id):
     
     food_id = int(food_id)
     found_food = None
-    for food in food:
+    for food in foods:
         if food.id == food_id:
             found_food = food
     data = dict (food = found_food)
