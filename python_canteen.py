@@ -45,8 +45,8 @@ def buy_food(food_id):
 
 @route('/re_stock_food/<food_id>')
 @view ('re_stock_food')
-def re_stock(food_id):
-    
+def buy_food(food_id):
+
     food_id = int(food_id)
     found_food = None
     for food in foods:
@@ -56,12 +56,6 @@ def re_stock(food_id):
     found_food.food_num = found_food.food_num + 1
     return data
 
-
-
-@route('/re_stock')
-@view ('re_stock')
-def index():
-    pass
 
 
 run(host='0.0.0.0', port = 8080, reloader=True, debug=True)
