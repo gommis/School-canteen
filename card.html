@@ -7,12 +7,14 @@
 	<div class="row">
 		%for food in food_info:
 		<div class="col s12 m4">
-			<div class="card blue-grey darken-1">
-				<div class="card-content white-text">
+			<div class="card"style="background-color:#DB2929;">
+				<div class="card-content white-text" style="text-align:center;" >
 					<span class="card-title">{{food.food_name}}</span>
 					<p>Number left: {{food.food_num}}</p>
+					<p>Price: {{food.food_price}}</p>
 				</div>
-				<div class="card-action">
+				<div class="card-action" style="text-align:center;" >
+					
 					<a href="/purchase_food/{{food.id}}" class="waves-effect waves-light btn">Buy Food</a>
 					<a href="/re_stock_food/{{food.id}}" class="waves-effect waves-light btn">Re-Stock Food</a>
 				</div>

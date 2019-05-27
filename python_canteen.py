@@ -5,19 +5,20 @@ class Food:
 
     _ids = count (0)
 
-    def __init__(self,food_name, food_num): 
+    def __init__(self,food_name, food_num, food_price): 
         self.id = next(self._ids)
         self.food_name = food_name
         self.food_num = food_num
+        self.food_price = food_price
 
 
 foods = [
-    Food("Mini pizza", 3),
-    Food("Sushi roll", 9),
-    Food("Pie", 13)
+    Food("Mini pizza", 3, "$3"),
+    Food("Sushi roll", 9, "$4"),
+    Food("Pie", 13, "$3.50")
     ]
 
-@route('/index')
+@route('/')
 @view ('index')
 def index():
     pass
