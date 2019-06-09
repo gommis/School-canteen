@@ -5,17 +5,18 @@ class Food:
 
     _ids = count (0)
 
-    def __init__(self,food_name, food_num, food_price): 
+    def __init__(self,food_name, food_num, food_price, food_sold): 
         self.id = next(self._ids)
         self.food_name = food_name
         self.food_num = food_num
         self.food_price = food_price
+        self.food_sold = food_sold
 
 
 foods = [
-    Food("Mini pizza", 3, "$3"),
-    Food("Sushi roll", 9, "$4"),
-    Food("Pie", 13, "$3.50")
+    Food("Mini pizza", 3, "$3", 0),
+    Food("Sushi roll", 9, "$4", 0),
+    Food("Pie", 13, "$3.50", 0)
     ]
 
 @route('/')
@@ -41,6 +42,7 @@ def buy_food(food_id):
             found_food = food
     data = dict (food = found_food)
     found_food.food_num = found_food.food_num - 1
+    found_food.food_sold = found_food.food_sold + 1
     return data
 
 
